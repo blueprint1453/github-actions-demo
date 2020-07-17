@@ -13,11 +13,7 @@ jobs:
         persist-credentials: false
     - name: Install and Build
       run: |
-        npm install
-        npm run-script build
-        yarn add --dev gh-pages
-        yarn build
-        gh-pages -d build
+        yarn && yarn build
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
